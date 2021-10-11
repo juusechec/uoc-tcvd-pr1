@@ -183,15 +183,15 @@ try:
         for site in sites:
             print('looking:', site['country'], ', product:', product['name'])
 
-            write_file(product['name'] + ',')
+            write_file('"' + product['name'] + '",')
 
-            write_file(site['country'] + ',')
+            write_file('"' + site['country'] + '",')
 
             # Get content from objective website
             url = site['url'] + '/' + product['uri']
             browser.get(url)
 
-            write_file(url + ',')
+            write_file('"' + url + '",')
 
             # Apply delay
             browser.implicitly_wait(TimeOut)
@@ -201,15 +201,15 @@ try:
             items_prices = get_items_prices()
 
             if len(items_prices) > 0:
-                item_name = items_names[0].text
+                item_name = items_names[0].text.replace('"', "&dquo;")
                 print('item_name:', item_name)
-                write_file(item_name + ',')
+                write_file('"' + item_name + '",')
 
                 item_price = items_prices[0].text.split("\n")[0]
                 print('item_price:', item_price)
-                write_file(item_price + '\n')
+                write_file('"' + item_price + '"\n')
             else:
-                write_file(',\n')
+                write_file('"",\n')
 
 except Exception as e:
     print(e)

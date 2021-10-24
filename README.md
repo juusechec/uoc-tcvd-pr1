@@ -2,7 +2,7 @@
 Práctica 1 de la asignatura Tipología y Ciclo de Vida de los Datos de la UOC
 
 # Objetivo
-Cálculo de calidad de vida
+Cálculo de costo de vida tecnológico en algunos países de la región iberoamericana, simplificando el modelo a información de mercadolibre y todos sus subportales con ciertos productos que se encuentran en la mayoría de ellos.
 
 # Dependencias
 - python 3.8
@@ -24,3 +24,7 @@ python ScrapperSelenium.py
 ```sh
 pip freeze > requirements.txt
 ```
+
+# Integrantes
+- Jorge Useche (@jusech5)
+- Christian Zamora (@chrisitan)

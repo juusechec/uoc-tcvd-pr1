@@ -6,8 +6,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # First we want to check the robots.txt file of our objective website
 # A function get_robot_txt is constructed to check any url
-
-
 def get_robot_txt(url):
     if url.endswith('/'):
         path = url
@@ -216,69 +214,3 @@ except Exception as e:
 finally:
     browser.quit()
 
-
-# # Search all the urls for the top 50 streamers
-# elements = browser.find_elements_by_xpath(
-#     """//*[@id="tblControl"]/tbody/tr/td[1]/a""")
-# links = []
-# for element in elements:
-#     links.append(element.get_attribute("href"))
-
-# # Navigate through the links
-# dictlist = []
-# for link in links:
-#     browser.get(link)
-#     browser.implicitly_wait(TimeOut)
-#     userStatsDict = {}
-
-#     # Data for Scraping
-#     followers = browser.find_elements_by_css_selector(
-#         "body > div.RightContent > div.MainContent > div.PageContentContainer > div.StandardPageContainer > div > div:nth-child(1) > div:nth-child(1) > div > div.PageBackgroundColor.InfoPanelMiddle > div:nth-child(3) > div.InfoPanelRowRight.BoldText")
-#     streams = browser.find_elements_by_css_selector(
-#         "body > div.RightContent > div.MainContent > div.PageContentContainer > div.StandardPageContainer > div > div:nth-child(1) > div:nth-child(1) > div > div.PageBackgroundColor.InfoPanelMiddle > div:nth-child(5) > div.InfoPanelRowRight.BoldText > span:nth-child(1)")
-#     averageViews = browser.find_elements_by_css_selector(
-#         "body > div.RightContent > div.MainContent > div.PageContentContainer > div.StandardPageContainer > div > div:nth-child(1) > div:nth-child(2) > div > div.PageBackgroundColor.InfoPanelMiddle > div:nth-child(1) > div.InfoPanelRowRight.BoldText")
-#     watchTime = browser.find_elements_by_css_selector(
-#         "body > div.RightContent > div.MainContent > div.PageContentContainer > div.StandardPageContainer > div > div:nth-child(1) > div:nth-child(2) > div > div.PageBackgroundColor.InfoPanelMiddle > div:nth-child(3) > div.InfoPanelRowRight.BoldText")
-#     peakViewers = browser.find_elements_by_css_selector(
-#         "body > div.RightContent > div.MainContent > div.PageContentContainer > div.StandardPageContainer > div > div:nth-child(1) > div:nth-child(2) > div > div.PageBackgroundColor.InfoPanelMiddle > div:nth-child(5) > div.InfoPanelRowRight.BoldText")
-#     streamTime = browser.find_elements_by_css_selector(
-#         "body > div.RightContent > div.MainContent > div.PageContentContainer > div.StandardPageContainer > div > div:nth-child(1) > div:nth-child(2) > div > div.PageBackgroundColor.InfoPanelMiddle > div:nth-child(7) > div.InfoPanelRowRight.BoldText")
-#     topGame = browser.find_elements_by_xpath(
-#         """//*[@id="combinedPanel"]/div/div[2]/div/div[2]/div[8]/div[1]/a""")
-
-#     # Saving variables into a dictionary
-#     userStatsDict['User'] = link
-#     userStatsDict['Followers'] = followers[0].text
-#     userStatsDict['Streams'] = streams[0].text
-#     userStatsDict['AverageViews'] = averageViews[0].text
-#     userStatsDict['WatchTime'] = watchTime[0].text
-#     userStatsDict['PeakViewers'] = peakViewers[0].text
-#     userStatsDict['StreamTime'] = streamTime[0].text
-#     userStatsDict['topGameLink'] = topGame[0].get_attribute("href")
-
-#     dictlist.append(userStatsDict)
-
-# # Overwrite to the specified file.
-# # Create it if it does not exist.
-# filename = "/TwitchData.csv"
-# file = open(My_path + filename, "w+")
-
-# # Get the keys of the dictionary
-# keys = []
-# for key in userStatsDict:
-#     keys.append(key)
-
-# # Dump all the data with CSV format
-# for i in range(len(keys)):
-#     file.write(str(keys[i]) + ";")
-# file.write("\n")
-
-# for i in range(len(dictlist)):
-#     for j in range(len(keys)):
-#         file.write(str(dictlist[i][keys[j]]) + ";")
-#     file.write("\n")
-
-# file.close()
-
-# browser.quit()

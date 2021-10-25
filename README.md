@@ -46,6 +46,8 @@ pip freeze > requirements.txt
 | precio       | Precio junto con su moneda                        |
 | item         | Nombre completo del item encontrado               |
 
-# DOI Zenode
+# [DOI](https://en.wikipedia.org/wiki/Digital_object_identifier) (digital object identifier) para referencias
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5580016.svg)](https://doi.org/10.5281/zenodo.5580016)
+
+# Enlace Zenodo
 https://zenodo.org/record/5580016#.YXXxkHtOldA

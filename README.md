@@ -26,5 +26,26 @@ pip freeze > requirements.txt
 ```
 
 # Integrantes
-- Jorge Useche (@jusech5)
-- Christian Zamora (@chrisitan)
+- Jorge Ulises Useche Cuellar (@juusechec)
+- Cristian Alejandro Zamora Flores (@chrisitan)
+
+# Descripción de los ficheros
+- ScrapperSelenium.py: Script standalone para la ejecución del webscrapping.
+- MercadoLibreData.csv: Archivo destino del webscrapping.
+- .gitignore: Archivo que nos ayuda a decirle al sistema git qué queremos trackear en la gestión del versionamiento del código.
+- LICENSE: Licencia del código generado, no de la información resultante o de las herramientas usadas.
+- README.md: Documentación del proyecto.
+- requirements.txt: Lista de las dependencias del proyecto python.
+
+# Estructura de los datos
+| Columna      | Descripción                                       |
+| ------------ | -----------                                       |
+| product      | Nombre del producto buscado                       |
+| country      | País del subsitio de Mercado libre buscado        |
+| url          | URL del item encontrado                           |
+| precio       | Precio junto con su moneda                        |
+| item         | Nombre completo del item encontrado               |
+
+# DOI Zenode
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5580016.svg)](https://doi.org/10.5281/zenodo.5580016)
+https://zenodo.org/record/5580016#.YXXxkHtOldA

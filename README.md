@@ -26,8 +26,8 @@ pip freeze > requirements.txt
 ```
 
 # Integrantes
-- Jorge Ulises Useche Cuellar (@juusechec)
-- Cristian Alejandro Zamora Flores (@chrisitan)
+- Jorge Ulises Useche Cuellar ([@juusechec](https://github.com/juusechec))
+- Cristian Alejandro Zamora Flores ([@chrisitan](https://github.com/chrisitan))
 
 # Descripción de los ficheros
 - ScrapperSelenium.py: Script standalone para la ejecución del webscrapping.

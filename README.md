@@ -51,3 +51,7 @@ pip freeze > requirements.txt
 
 # Enlace Zenodo
 https://zenodo.org/record/5580016#.YXXxkHtOldA
+
+# Vídeo con la explicación
+https://drive.google.com/file/d/1mgtV7NtbwAfAwFoWksdmnF02uW-9Oij9/view
+

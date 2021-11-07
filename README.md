@@ -53,6 +53,6 @@ pip freeze > requirements.txt
 https://zenodo.org/record/5580016#.YXXxkHtOldA
 
 # Vídeo con la explicación
-[![playvideo](https://user-images.githubusercontent.com/4140058/138766156-f5068597-1423-485e-a600-c2c22b311be3.png)](https://drive.google.com/file/d/1mgtV7NtbwAfAwFoWksdmnF02uW-9Oij9/view)
+[![playvideo](https://user-images.githubusercontent.com/4140058/138766156-f5068597-1423-485e-a600-c2c22b311be3.png)](https://drive.google.com/file/d/1HOfT8t2qD4HYXyg6MBHXMWwV-0-kPX83/view)
 
 

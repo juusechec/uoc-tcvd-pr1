@@ -165,20 +165,30 @@ def get_items_prices():
 
 filename = "MercadoLibreData.csv"
 current_path = os.path.dirname(os.path.abspath(__file__))
+filename_path = current_path + '/' + filename
 # print('current_path:', current_path)
+os.remove(filename_path) 
 
 
 def write_file(text):
-    filename_path = current_path + '/' + filename
     with open(filename_path, 'a') as file:
         file.write(text)
         file.close()
 
+def authenticate_user():
+    browser.get('https://www.mercadolibre.com/jms/mco/lgz/login?platform_id=ML&go=https%3A%2F%2Fwww.mercadolibre.com.co%2F&loginType=explicit#nav-header')
+    browser.find_element_by_id("user_id").send_keys(os.getenv('mluser'))
+    browser.find_element_by_css_selector("button.andes-button > span:nth-child(1)").click()
+    # no fue posible debido a que requiere captcha y tiene doble factor de autenticación
+    browser.find_element_by_id("password").send_keys(os.getenv('mlpass'))
 
 try:
     write_file('product,country,url,item,precio\n')
     for product in products:
         for site in sites:
+            if site['country'] == 'Colombia':
+                pass
+                #authenticate_user()
             print('looking:', site['country'], ', product:', product['name'])
 
             write_file('"' + product['name'] + '",')
@@ -212,5 +222,6 @@ try:
 except Exception as e:
     print(e)
 finally:
-    browser.quit()
+    pass
+    #browser.quit()
 

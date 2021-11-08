@@ -1,5 +1,6 @@
 import requests
 import os
+import time
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
@@ -197,12 +198,24 @@ try:
 
             # Get content from objective website
             url = site['url'] + '/' + product['uri']
+            # Delay Calculo
+            t0 = time.time()
+
+            # Obtiene el browser
             browser.get(url)
 
-            write_file('"' + url + '",')
+            # estimación del tiempo de respuesta en segundos
+            response_delay = time.time() - t0
+
+            # espera de 10x, con respecto al tiempo de respuesta
+            delay_time = 10 * response_delay
+            print('Wait for...', delay_time, 'seconds')
+            time.sleep(delay_time)
 
             # Apply delay
             browser.implicitly_wait(TimeOut)
+
+            write_file('"' + url + '",')
 
             items_names = get_items_names()
 
